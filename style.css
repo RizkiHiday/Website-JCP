@@ -2684,11 +2684,10 @@ body {
     flex: 1;
     text-align: center;
     width: 100%;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    overflow: visible;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 @media (max-width: 1024px) {
@@ -2934,11 +2933,8 @@ body {
     overflow-wrap: break-word;
     text-align: center;
     width: 100%;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    overflow: visible;
 }
 
 .offering-button {

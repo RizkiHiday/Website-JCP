@@ -145,6 +145,7 @@
             emailjs.init("MJCuNmZNDcEm9M1jR");
         })();
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -576,6 +577,9 @@
                     <div class="form-row textarea-row">
                         <textarea name="message" id="contactMessage" placeholder="Pesan" rows="6" required></textarea>
                     </div>
+                    <div class="form-row" style="margin-bottom: 1.5rem;">
+                        <div class="g-recaptcha" data-sitekey="6Ldn6zksAAAAAJEtO8PPKSnPQtGvYvMRcY12p7Z2"></div>
+                    </div>
                     <div class="form-row actions-row">
                         <p class="contact-status" style="display:none;"></p>
                         <button type="submit" class="btn btn-submit contact-submit">Kirim Pesan</button>
@@ -845,6 +849,17 @@
                         return;
                     }
 
+                    // reCAPTCHA verification
+                    const recaptchaResponse = grecaptcha.getResponse();
+                    if (recaptchaResponse.length === 0) {
+                        if (statusEl) {
+                            statusEl.style.display = 'block';
+                            statusEl.style.color = '#c0392b';
+                            statusEl.textContent = 'Mohon centang reCAPTCHA untuk memastikan Anda bukan robot.';
+                        }
+                        return;
+                    }
+
                     // Show sending state
                     if (statusEl) {
                         statusEl.style.display = 'block';
@@ -869,6 +884,7 @@
                         title: subject,
                         subject: subject, // Tambahan untuk subject
                         message: message,
+                        'g-recaptcha-response': recaptchaResponse, // Send captcha token if needed by backend
                         time: new Date().toLocaleString('id-ID', { 
                             weekday: 'long', 
                             year: 'numeric', 

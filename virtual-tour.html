@@ -4,18 +4,363 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NORTH VIRTUAL TOUR 360 - Jogja Creative Production</title>
-    <link rel="icon" type="image/png" href="logo/J.png">
+    <link rel="icon" type="image/png" href="logo/LOGO Jogja Creative Production new.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern Typography */
+        * {
+            letter-spacing: 0.01em;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+        
+        /* Package Card Hover Effect */
+        @media (min-width: 769px) {
+            .package-card:hover {
+                transform: translateY(-8px) !important;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+            }
+        }
+        
+        /* Modern Package Cards */
+        .package-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .package-card h3 {
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        .package-card ul li {
+            line-height: 1.6;
+        }
+        
+        /* Better Text Spacing */
+        .service-header-title {
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .service-main-title {
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        .benefits-title,
+        .offerings-title,
+        .price-list-title {
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+        
+        /* Improved Card Text */
+        .benefit-card-title,
+        .offering-card-title {
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        .benefit-card-text,
+        .offering-card-text {
+            line-height: 1.7;
+        }
+        
+        /* Modern Table Styling */
+        .service-price-list table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .service-price-list table th {
+            letter-spacing: 0.02em;
+            font-weight: 600;
+        }
+        
+        .service-price-list table td {
+            line-height: 1.6;
+        }
+        
+        /* Benefits Grid Styling */
+        .benefits-grid[style*="grid-template-columns: repeat(3"] {
+            align-items: stretch;
+        }
+        
+        .benefits-grid .benefit-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .benefits-grid .benefit-card .benefit-card-text {
+            flex-grow: 1;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .benefits-grid[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .service-price-list .container > div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .benefits-grid[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Price List Grid to Single Column */
+            .service-price-list .container > div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Price List Section */
+            .service-price-list {
+                padding: 40px 0 !important;
+            }
+            
+            .price-list-title {
+                font-size: 1.8rem !important;
+                margin-bottom: 2rem !important;
+                padding: 0 1rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Package Cards */
+            .package-card {
+                padding: 1.75rem !important;
+            }
+            
+            /* Container padding */
+            .service-price-list .container {
+                padding: 0 1rem !important;
+            }
+            
+            /* Package card content */
+            .package-card > div:first-child {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .package-card h3 {
+                font-size: 1.4rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .package-card p {
+                font-size: 0.85rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            
+            .package-card > div:first-child > div:first-of-type {
+                font-size: 1.6rem !important;
+            }
+            
+            .package-card > div:first-child > div:last-of-type {
+                font-size: 0.8rem !important;
+            }
+            
+            /* List items */
+            .package-card ul li {
+                padding: 0.5rem 0 !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .package-card ul li i {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Table responsive */
+            .service-price-list table {
+                font-size: 0.85rem !important;
+            }
+            
+            .service-price-list table th,
+            .service-price-list table td {
+                padding: 0.75rem 0.5rem !important;
+            }
+            
+            /* Service Header */
+            .service-header-content {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+            
+            .service-header-left,
+            .service-header-right {
+                width: 100% !important;
+            }
+            
+            .service-header-title {
+                font-size: 1.8rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .service-header-desc {
+                font-size: 0.95rem !important;
+            }
+            
+            /* Service Main Content */
+            .service-content-wrapper {
+                flex-direction: column !important;
+            }
+            
+            .service-content-left,
+            .service-content-right {
+                width: 100% !important;
+            }
+            
+            .service-main-title {
+                font-size: 1.5rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            .service-main-text {
+                font-size: 0.95rem !important;
+            }
+            
+            /* Benefits Grid */
+            .benefits-grid[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .benefit-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Offerings Grid */
+            .offerings-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .offering-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Container general */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .price-list-title {
+                font-size: 1.4rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .package-card {
+                padding: 1.5rem !important;
+            }
+            
+            .package-card h3 {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .package-card > div:first-child > p {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .package-card > div:first-child > div:first-of-type {
+                font-size: 1.4rem !important;
+            }
+            
+            .package-card > div:first-child > div:last-of-type {
+                font-size: 0.75rem !important;
+            }
+            
+            .package-card h4 {
+                font-size: 1rem !important;
+            }
+            
+            .package-card ul li {
+                font-size: 0.85rem !important;
+                padding: 0.45rem 0 !important;
+            }
+            
+            .package-card ul li span {
+                line-height: 1.4 !important;
+            }
+            
+            .service-price-list table {
+                font-size: 0.8rem !important;
+            }
+            
+            .service-price-list table th,
+            .service-price-list table td {
+                padding: 0.6rem 0.4rem !important;
+            }
+            
+            /* ADD-ON Section */
+            .service-price-list > .container > div:last-child h3 {
+                font-size: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Service Header Mobile */
+            .service-header-title {
+                font-size: 1.5rem !important;
+            }
+            
+            .service-header-desc {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Service Main Title */
+            .service-main-title {
+                font-size: 1.3rem !important;
+            }
+            
+            .service-main-text {
+                font-size: 0.95rem !important;
+            }
+            
+            /* Benefits & Offerings */
+            .benefits-title,
+            .offerings-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .benefits-subtitle,
+            .offerings-subtitle {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        /* Remove box shadow and border from virtual tour image */
+        .virtual-tour-img {
+            box-shadow: none !important;
+            border: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="logo/J.png" alt="Jogja Creative Production" class="logo-img">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <img src="logo/LOGO Jogja Creative Production new.png" alt="Jogja Creative Production" class="logo-img">
                 <span class="logo-text">Jogja Creative Production</span>
-            </div>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
                 <span></span>
@@ -56,11 +401,21 @@
                     <p class="service-main-text">
                         Solusi kami memungkinkan hotel, kafe, properti, dan ruang komersial menampilkan ruang mereka tanpa batasan jarak.
                     </p>
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
                     <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Virtual%20Tour%20360%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" class="service-cta-button">Hubungi Kami</a>
+                        <a href="https://www.instagram.com/north.virtual360?igsh=eWNmdzVsemhqMm9k" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3); transition: all 0.3s ease; text-decoration: none;" title="Follow us on Instagram" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(188, 24, 136, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(188, 24, 136, 0.3)';">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white" style="width: 24px; height: 24px;">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@north.virtual360?_r=1&_t=ZS-925whChqwBp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #000000 0%, #161823 50%, #000000 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; text-decoration: none;" title="Follow us on TikTok" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.3)';">
+                            <i class="fab fa-tiktok" style="font-size: 24px; color: white;"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-content-right">
                     <div class="service-illustration">
-                        <img src="asset/Photography.PNG" alt="Virtual Tour 360" class="service-illustration-img">
+                        <img src="asset/360.png" alt="Virtual Tour 360" class="service-illustration-img virtual-tour-img">
                     </div>
                 </div>
             </div>
@@ -72,7 +427,7 @@
         <div class="container">
             <h2 class="benefits-title">Keuntungan Menggunakan 360 Virtual Tour</h2>
             <p class="benefits-subtitle">Beberapa keuntungan yang akan Anda dapatkan pada layanan NORTH VIRTUAL TOUR 360 yang kami berikan kepada Anda.</p>
-            <div class="benefits-grid">
+            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                 <div class="benefit-card">
                     <div class="benefit-icon-wrapper">
                         <i class="fas fa-clock"></i>
@@ -162,70 +517,183 @@
     </section>
 
     <!-- Price List Section -->
-    <section class="service-price-list">
+    <section class="service-price-list" style="background: #f8f9fa; padding: 80px 0;">
         <div class="container">
-            <h2 class="price-list-title">PRICE LIST</h2>
-            <div class="price-list-wrapper">
-                <div class="price-category">
-                    <h3 class="price-category-title">VIRTUAL TOUR 360</h3>
-                    <div class="price-packages">
-                        <div class="price-package">
-                            <h4 class="package-name">PAKET BASIC</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Paket Dasar</span>
-                                    <span class="package-price">Rp 5.000.000</span>
+            <h2 class="price-list-title" style="text-align: center; color: #2f4157; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; line-height: 1.2;">VIRTUAL TOUR 360 – PRICE LIST</h2>
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="width: 100px; height: 3px; background: linear-gradient(to right, #2f4157 0%, #2f4157 30%, #ffc857 30%, #ffc857 100%);"></div>
+                                </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1400px; margin: 0 auto 4rem;">
+                <!-- Paket 1 - Basic Tour -->
+                <div class="package-card" style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.875rem; letter-spacing: -0.01em; line-height: 1.3;">PAKET 1 – BASIC TOUR</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.5;">Cocok untuk: Hotel kecil / homestay / guest house</p>
+                        <div style="font-size: 2.25rem; font-weight: 700; color: #ffc857; margin-bottom: 0.75rem; letter-spacing: -0.02em; line-height: 1.2;">Rp 5.000.000</div>
+                        <div style="color: #999; font-size: 0.8125rem; line-height: 1.4;">Waktu Pengerjaan: 7–10 Hari Kerja</div>
+                            </div>
+                    
+                    <div>
+                        <h4 style="color: #2f4157; font-size: 1.0625rem; font-weight: 600; margin-bottom: 1.25rem; letter-spacing: 0.01em;">Fasilitas:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Resolusi 4K</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Navigasi antar ruangan</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">5 titik panorama</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Logo + kontak</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Output format bisa ditampilkan di laptop dan HP</span>
+                            </li>
+                        </ul>
                                 </div>
                             </div>
+
+                <!-- Paket 2 - Premium Tour -->
+                <div class="package-card" style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #ffc857; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -12px; right: 24px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 24px; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 2px 8px rgba(255, 200, 87, 0.3);">
+                        POPULER
                         </div>
-                        <div class="price-package">
-                            <h4 class="package-name">PAKET PREMIUM TOUR</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Paket Lengkap</span>
-                                    <span class="package-price">Rp 9.000.000</span>
+                    <div style="text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.875rem; letter-spacing: -0.01em; line-height: 1.3;">PAKET 2 – PREMIUM TOUR</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.5;">Cocok untuk: Hotel menengah dengan fasilitas lengkap</p>
+                        <div style="font-size: 2.25rem; font-weight: 700; color: #ffc857; margin-bottom: 0.75rem; letter-spacing: -0.02em; line-height: 1.2;">Rp 10.000.000</div>
+                        <div style="color: #999; font-size: 0.8125rem; line-height: 1.4;">Waktu Pengerjaan: 10–13 Hari Kerja</div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="price-package">
-                            <h4 class="package-name">LUXURY EXPERIENCE</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Paket Premium</span>
-                                    <span class="package-price">Rp 17.000.000</span>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div>
+                        <h4 style="color: #2f4157; font-size: 1.0625rem; font-weight: 600; margin-bottom: 1.25rem; letter-spacing: 0.01em;">Fasilitas:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Hingga 10 titik panorama</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Desain custom sesuai branding</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Hotspot interactive</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Output format bisa ditampilkan di laptop dan HP</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Music latar</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Peta mini navigasi</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Integrasi booking hotel (CTA)</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="price-category">
-                    <h3 class="price-category-title">Add-on / Tambahan</h3>
-                    <div class="package-details">
-                        <div class="package-item">
-                            <span class="package-duration">Titik tambahan panorama</span>
-                            <span class="package-price">Rp 250.000 / titik</span>
+
+                <!-- Paket 3 - Luxury Experience -->
+                <div class="package-card" style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.875rem; letter-spacing: -0.01em; line-height: 1.3;">PAKET 3 – LUXURY EXPERIENCE</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-style: italic; margin-bottom: 1.25rem; line-height: 1.5;">Cocok untuk: Hotel berbintang / resort besar</p>
+                        <div style="font-size: 2.25rem; font-weight: 700; color: #ffc857; margin-bottom: 0.75rem; letter-spacing: -0.02em; line-height: 1.2;">Rp 20.000.000</div>
+                        <div style="color: #999; font-size: 0.8125rem; line-height: 1.4;">Waktu Pengerjaan: 13–15 Hari Kerja</div>
                         </div>
-                        <div class="package-item">
-                            <span class="package-duration">Drone 360 tambahan</span>
-                            <span class="package-price">Rp 500.000 / titik</span>
-                        </div>
-                        <div class="package-item">
-                            <span class="package-duration">Voice-over narator</span>
-                            <span class="package-price">Rp 500.000</span>
-                        </div>
-                        <div class="package-item">
-                            <span class="package-duration">Video teaser promosi (15–30 detik)</span>
-                            <span class="package-price">Rp 1.000.000</span>
-                        </div>
-                        <div class="package-item">
-                            <span class="package-duration">Hosting + domain 1 tahun</span>
-                            <span class="package-price">Rp 1.000.000</span>
-                        </div>
-                        <div class="package-item">
-                            <span class="package-duration">Maintenance & update konten 6 bulan</span>
-                            <span class="package-price">Rp 500.000</span>
-                        </div>
+                    
+                    <div>
+                        <h4 style="color: #2f4157; font-size: 1.0625rem; font-weight: 600; margin-bottom: 1.25rem; letter-spacing: 0.01em;">Fasilitas:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Hingga 20 titik panorama</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Drone 360 view area luar (max 2 titik)</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Free voice over</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Hosting + Domain</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Menu interactive</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Integrasi booking link (CTA)</span>
+                            </li>
+                            <li style="padding: 0.75rem 0; color: #555; display: flex; align-items: flex-start; gap: 0.875rem;">
+                                <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.0625rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <span style="font-size: 0.9375rem; line-height: 1.6; letter-spacing: 0.01em;">Video short teaser 15–30 detik untuk media sosial</span>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- ADD-ON Section -->
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="text-align: center; color: #2f4157; font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.01em; line-height: 1.3;">ADD-ON / TAMBAHAN</h3>
+                <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                    <div style="width: 100px; height: 3px; background: linear-gradient(to right, #2f4157 0%, #2f4157 30%, #ffc857 30%, #ffc857 100%);"></div>
+                </div>
+                <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: separate; border-spacing: 0;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+                                <th style="padding: 1.125rem 1rem; text-align: left; color: #2f4157; font-weight: 600; border-bottom: 2px solid #ffc857; letter-spacing: 0.02em; font-size: 0.9375rem;">Layanan</th>
+                                <th style="padding: 1.125rem 1rem; text-align: right; color: #2f4157; font-weight: 600; border-bottom: 2px solid #ffc857; letter-spacing: 0.02em; font-size: 0.9375rem;">Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Titik tambahan panorama</td>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 250.000 / titik</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Drone 360 tambahan</td>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 500.000 / titik</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Voice over narator</td>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 500.000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Video teaser promosi (15–30 detik)</td>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Hosting + Domain 1 tahun</td>
+                                <td style="padding: 1.125rem 1rem; border-bottom: 1px solid #f0f0f0; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.125rem 1rem; color: #555; line-height: 1.6; font-size: 0.9375rem; letter-spacing: 0.01em;">Maintenance & update konten 6 bulan</td>
+                                <td style="padding: 1.125rem 1rem; text-align: right; color: #2f4157; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.01em;">Rp 500.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -326,22 +794,12 @@
                 <div class="footer-col">
                     <h4>Jogja Creative Production</h4>
                     <p>Perum Jl. Griya Mlati Indah No.B4<br>Mulungan Kulon, Sendangadi, Kec. Mlati<br>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285</p>
-                    <p><strong>Telpon:</strong> 08567874388</p>
+                    <p><strong>Telpon:</strong>08567874388</p>
                     <p><strong>Email:</strong> jogjacreativepro@gmail.com</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/jogjacreativeproduction/" target="_blank" rel="noopener noreferrer" title="Instagram">
                             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                 <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
                             </svg>
                         </a>
                         <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Jogja%20Creative%20Production%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" title="WhatsApp">
@@ -357,8 +815,6 @@
                         <li><a href="tentang-kami.html">Tentang kami</a></li>
                         <li><a href="index.html#services">Layanan</a></li>
                         <li><a href="index.html#portfolio">Portofolio</a></li>
-                        <li><a href="index.html#blog">Blog</a></li>
-                        <li><a href="#">Promo</a></li>
                     </ul>
                 </div>
             </div>
@@ -402,6 +858,30 @@
                     }
                 });
             }
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const targets = document.querySelectorAll('section, .service-card, .price-card, .videobooth-card, .addon-card, .benefit-card, .offering-card, .contact-card, .target-category-card, .team-member, .faq-item');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+        targets.forEach((el, idx) => {
+            el.classList.add('reveal-on-scroll');
+            if (reduceMotion) {
+                el.classList.add('visible');
+                return;
+            }
+            el.style.transitionDelay = `${Math.min(idx * 40, 240)}ms`;
+            observer.observe(el);
+        });
         });
     </script>
 </body>

@@ -4,18 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDONESIA DRONE TRAINING CENTRE - Jogja Creative Production</title>
-    <link rel="icon" type="image/png" href="logo/J.png">
+    <link rel="icon" type="image/png" href="logo/LOGO Jogja Creative Production new.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Package Card Hover Effect */
+        @media (min-width: 769px) {
+            .package-card:hover {
+                transform: translateY(-8px) !important;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .service-price-list .container > div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Price List Grid to Single Column */
+            .service-price-list .container > div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Price List Section */
+            .service-price-list {
+                padding: 50px 0 !important;
+            }
+            
+            .price-list-title {
+                font-size: 1.8rem !important;
+                margin-bottom: 1rem !important;
+                padding: 0 1rem !important;
+            }
+            
+            /* Package Cards */
+            .package-card {
+                padding: 2rem !important;
+            }
+            
+            /* Container padding */
+            .service-price-list .container {
+                padding: 0 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .price-list-title {
+                font-size: 1.5rem !important;
+            }
+            
+            .package-card {
+                padding: 1.5rem !important;
+            }
+            
+            .package-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .package-card ul li {
+                font-size: 0.9rem !important;
+            }
+        }
+        
+        /* Remove box shadow and border from drone image */
+        .drone-img {
+            box-shadow: none !important;
+            border: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="logo/J.png" alt="Jogja Creative Production" class="logo-img">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <img src="logo/LOGO Jogja Creative Production new.png" alt="Jogja Creative Production" class="logo-img">
                 <span class="logo-text">Jogja Creative Production</span>
-            </div>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
                 <span></span>
@@ -36,11 +105,11 @@
         <div class="container">
             <div class="service-header-content">
                 <div class="service-header-left">
-                    <h1 class="service-header-title">INDONESIA DRONE TRAINING CENTRE</h1>
+                    <h1 class="service-header-title">INDONESIA DRONE TRAINING CENTER</h1>
                     <p class="service-header-desc">Pelatihan Drone profesional untuk pemula hingga mahir, dengan fokus pada keterampilan, keselamatan, dan praktik langsung.</p>
                 </div>
                 <div class="service-header-right">
-                    <span class="service-breadcrumb">Beranda / INDONESIA DRONE TRAINING CENTRE</span>
+                    <span class="service-breadcrumb">Beranda / INDONESIA DRONE TRAINING CENTER</span>
                 </div>
             </div>
         </div>
@@ -56,11 +125,18 @@
                     <p class="service-main-text">
                         Kami membantu individu, institusi, dan perusahaan menguasai teknologi drone dari dasar hingga tingkat lanjutan, baik dari sisi teknis penerbangan, legalitas, maupun kualitas output visual atau data. Kami memastikan setiap peserta tidak hanya bisa menerbangkan drone, tetapi juga mampu menghasilkan hasil kerja yang presisi, berkualitas tinggi, dan sesuai standar industri.
                     </p>
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
                     <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Drone%20Pilot%20Training%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" class="service-cta-button">Hubungi Kami</a>
+                        <a href="https://www.instagram.com/idtc.drone?igsh=anY5a2I2emR3dDNr" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3); transition: all 0.3s ease; text-decoration: none;" title="Follow us on Instagram" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(188, 24, 136, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(188, 24, 136, 0.3)';">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white" style="width: 24px; height: 24px;">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-content-right">
                     <div class="service-illustration">
-                        <img src="asset/Photography.PNG" alt="Drone Pilot Training" class="service-illustration-img">
+                        <img src="asset/doren.png" alt="Drone Pilot Training" class="service-illustration-img drone-img">
                     </div>
                 </div>
             </div>
@@ -71,7 +147,7 @@
     <section class="service-benefits">
         <div class="container">
             <h2 class="benefits-title">Keunggulan IDTC</h2>
-            <p class="benefits-subtitle">Beberapa keunggulan yang akan Anda dapatkan pada layanan INDONESIA DRONE TRAINING CENTRE yang kami berikan kepada Anda.</p>
+            <p class="benefits-subtitle">Beberapa keunggulan yang akan Anda dapatkan pada layanan INDONESIA DRONE TRAINING CENTER yang kami berikan kepada Anda.</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon-wrapper">
@@ -155,50 +231,103 @@
     </section>
 
     <!-- Price List Section -->
-    <section class="service-price-list">
+    <section class="service-price-list" style="background: #f8f9fa; padding: 80px 0;">
         <div class="container">
-            <h2 class="price-list-title">PRICE LIST</h2>
-            <div class="price-list-wrapper">
-                <div class="price-category">
-                    <h3 class="price-category-title">Paket Pelatihan Drone</h3>
-                    <div class="price-packages">
-                        <div class="price-package" onclick="showPackageDetail('basic')" style="cursor: pointer;">
-                            <h4 class="package-name">PAKET BASIC</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">1 Hari</span>
-                                    <span class="package-price">Rp 1.000.000</span>
+            <h2 class="price-list-title" style="text-align: center; color: #2f4157; font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;">PRICE LIST – Pelatihan Drone</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">Indonesia Training Drone Center</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1400px; margin: 0 auto;">
+                <!-- Paket Basic -->
+                <div class="package-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Paket Basic</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: #ffc857; margin-bottom: 0.5rem;">Rp 1.000.000</div>
                                 </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 2rem;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Pengenalan Dasar Drone + Modul</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>1 hari Pembelajaran</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free akses simulator Drone</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free Konsumsi</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Sertifikat Kompetensi (JPL)</span>
+                        </li>
+                    </ul>
                             </div>
+
+                <!-- Paket Advance -->
+                <div class="package-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid #ffc857; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -15px; right: 20px; background: #ffc857; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+                        POPULER
                         </div>
-                        <div class="price-package" onclick="showPackageDetail('advance')" style="cursor: pointer;">
-                            <h4 class="package-name">PAKET ADVANCE</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Paket Lengkap</span>
-                                    <span class="package-price">Rp 2.500.000</span>
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Paket Advance</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: #ffc857; margin-bottom: 0.5rem;">Rp 2.500.000</div>
                                 </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 2rem;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Pelatihan Drone Lanjutan + Modul</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>3 Hari Pembelajaran</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free Praktik Terbang di Tempat Wisata</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free Konsumsi</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Sertifikat Kompetensi (JPL)</span>
+                        </li>
+                    </ul>
                             </div>
-                        </div>
-                        <div class="price-package" onclick="showPackageDetail('profesional')" style="cursor: pointer;">
-                            <h4 class="package-name">PAKET PROFESIONAL</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Paket Komprehensif</span>
-                                    <span class="package-price">Rp 5.000.000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price-package" onclick="showPackageDetail('custom')" style="cursor: pointer;">
-                            <h4 class="package-name">PAKET CUSTOM</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">Sesuai Kebutuhan</span>
-                                    <span class="package-price">Mulai dari Rp 3.000.000</span>
-                                </div>
-                            </div>
-                        </div>
+
+                <!-- Paket Profesional -->
+                <div class="package-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Paket Profesional</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: #ffc857; margin-bottom: 0.5rem;">Rp 5.000.000</div>
                     </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; margin-bottom: 2rem;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Pembelajaran Profesional Foto Video Drone + Modul</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>5 Hari Pembelajaran</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free Praktik Terbang di Tempat Wisata + Foto Video + Editing</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid #f8f9fa; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Free Konsumsi + Special Souvenir</span>
+                        </li>
+                        <li style="padding: 0.75rem 0; color: #666; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: #ffc857; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                            <span>Sertifikat Kompetensi (JPL)</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -342,31 +471,6 @@
         </div>
     </section>
 
-    <!-- Package Detail Popup -->
-    <div id="package-popup" class="package-popup-overlay">
-        <div class="package-popup-content">
-            <button class="package-popup-close" onclick="closePackageDetail()">&times;</button>
-            <h2 class="package-popup-title" id="popup-title">PAKET BASIC</h2>
-            <div class="package-popup-body">
-                <div id="popup-duration" style="display: none; margin-bottom: 1.5rem;">
-                    <h3 class="package-popup-subtitle">Durasi:</h3>
-                    <p id="popup-duration-text" style="color: #666; font-size: 1rem; line-height: 1.6;"></p>
-                </div>
-                <h3 class="package-popup-subtitle">Materi:</h3>
-                <ul class="package-popup-list" id="popup-list">
-                    <li>Pengenalan dasar tentang drone</li>
-                    <li>Simulasi dan praktik kontrol drone</li>
-                    <li>Modul pelatihan</li>
-                    <li>Free akses perangkat drone pelatihan</li>
-                    <li>Free akses simulator drone pelatihan</li>
-                    <li>Sertifikat pelatihan</li>
-                    <li>Konsumsi selama pelatihan</li>
-                    <li>Dokumentasi</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <script>
         function toggleFaq(button) {
             const faqItem = button.parentElement;
@@ -386,113 +490,6 @@
                 faqIcon.textContent = '−';
             }
         }
-
-        function showPackageDetail(packageType) {
-            const popup = document.getElementById('package-popup');
-            const popupTitle = document.getElementById('popup-title');
-            const popupList = document.getElementById('popup-list');
-            const popupDuration = document.getElementById('popup-duration');
-            const popupDurationText = document.getElementById('popup-duration-text');
-            
-            // Data untuk setiap paket
-            const packageData = {
-                'basic': {
-                    title: 'PAKET BASIC',
-                    duration: null,
-                    items: [
-                        'Pengenalan dasar tentang drone',
-                        'Simulasi dan praktik kontrol drone',
-                        'Modul pelatihan',
-                        'Free akses perangkat drone pelatihan',
-                        'Free akses simulator drone pelatihan',
-                        'Sertifikat pelatihan',
-                        'Konsumsi selama pelatihan',
-                        'Dokumentasi'
-                    ]
-                },
-                'advance': {
-                    title: 'PAKET ADVANCE',
-                    duration: null,
-                    items: [
-                        'Pelatihan drone lanjutan + modul pembelajaran',
-                        '3 Hari Pembelajaran',
-                        'Free Penerbangan Drone di tempat wisata',
-                        'Free Konsumsi',
-                        'Sertifikat Pelatihan JPL'
-                    ]
-                },
-                'profesional': {
-                    title: 'PAKET PROFESIONAL',
-                    duration: null,
-                    items: [
-                        'Pembelajaran Profesional doto dan video drone + Modul',
-                        'Free Penerbangan drone wista, photoVidio dan Editing',
-                        'Free Konsumsi dan Special Souvenir',
-                        'Sertifikat Pelatihan JPL'
-                    ]
-                },
-                'custom': {
-                    title: 'PAKET CUSTOM',
-                    duration: 'Disesuaikan dengan kebutuhan peserta.',
-                    items: [
-                        'Pemetaan dan inspeksi berbasis drone (mapping/surveying)',
-                        'Pelatihan untuk kebutuhan industri spesifik (pertanian, properti, pertambangan dll.)',
-                        'Praktik menggunakan drone kelas profesional',
-                        'Bisa visite ke lokasi peserta'
-                    ]
-                }
-            };
-            
-            // Update konten popup berdasarkan paket yang dipilih
-            if (packageData[packageType]) {
-                popupTitle.textContent = packageData[packageType].title;
-                
-                // Tampilkan/sembunyikan durasi
-                if (packageData[packageType].duration) {
-                    popupDuration.style.display = 'block';
-                    popupDurationText.textContent = packageData[packageType].duration;
-                } else {
-                    popupDuration.style.display = 'none';
-                }
-                
-                // Update list materi
-                popupList.innerHTML = '';
-                packageData[packageType].items.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    popupList.appendChild(li);
-                });
-            }
-            
-            if (popup) {
-                popup.style.display = 'flex';
-                setTimeout(() => {
-                    popup.classList.add('show');
-                }, 10);
-            }
-        }
-
-        function closePackageDetail() {
-            const popup = document.getElementById('package-popup');
-            if (popup) {
-                popup.classList.remove('show');
-                setTimeout(() => {
-                    popup.style.display = 'none';
-                }, 300);
-            }
-        }
-
-        // Close popup when clicking outside
-        document.addEventListener('DOMContentLoaded', function() {
-            const popup = document.getElementById('package-popup');
-            if (popup) {
-                popup.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        closePackageDetail();
-                    }
-                });
-            }
-        });
     </script>
 
     <!-- Footer -->
@@ -506,22 +503,12 @@
                 <div class="footer-col">
                     <h4>Jogja Creative Production</h4>
                     <p>Perum Jl. Griya Mlati Indah No.B4<br>Mulungan Kulon, Sendangadi, Kec. Mlati<br>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285</p>
-                    <p><strong>Telpon:</strong> 08567874388</p>
+                    <p><strong>Telpon:</strong>08567874388</p>
                     <p><strong>Email:</strong> jogjacreativepro@gmail.com</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/jogjacreativeproduction/" target="_blank" rel="noopener noreferrer" title="Instagram">
                             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                 <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
                             </svg>
                         </a>
                         <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Jogja%20Creative%20Production%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" title="WhatsApp">
@@ -537,8 +524,6 @@
                         <li><a href="tentang-kami.html">Tentang kami</a></li>
                         <li><a href="index.html#services">Layanan</a></li>
                         <li><a href="index.html#portfolio">Portofolio</a></li>
-                        <li><a href="index.html#blog">Blog</a></li>
-                        <li><a href="#">Promo</a></li>
                     </ul>
                 </div>
             </div>
@@ -583,6 +568,30 @@
                     }
                 });
             }
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const targets = document.querySelectorAll('section, .service-card, .price-card, .videobooth-card, .addon-card, .benefit-card, .offering-card, .contact-card, .target-category-card, .team-member, .faq-item');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+        targets.forEach((el, idx) => {
+            el.classList.add('reveal-on-scroll');
+            if (reduceMotion) {
+                el.classList.add('visible');
+                return;
+            }
+            el.style.transitionDelay = `${Math.min(idx * 40, 240)}ms`;
+            observer.observe(el);
+        });
         });
     </script>
 </body>

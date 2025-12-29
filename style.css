@@ -5,6 +5,26 @@
     box-sizing: border-box;
 }
 
+/* Scroll reveal */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -998,6 +1018,39 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    transition: all 0.3s ease;
+}
+
+.why-icon svg,
+.why-icon i {
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    color: #ffc857;
+    filter: drop-shadow(0 2px 4px rgba(255, 200, 87, 0.3));
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-card:hover .why-icon {
+    transform: translateY(-4px) scale(1.05);
+    background: linear-gradient(135deg, rgba(255, 200, 87, 0.15) 0%, rgba(255, 200, 87, 0.05) 100%);
+}
+
+.why-card:hover .why-icon svg {
+    color: #ffd700;
+    filter: drop-shadow(0 4px 8px rgba(255, 200, 87, 0.5));
+    transform: scale(1.1);
 }
 
 .why-card h3 {
@@ -1132,9 +1185,11 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #f0f0f0;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .portfolio-item:hover {
@@ -1190,10 +1245,20 @@ body {
 }
 
 .portfolio-view-icon {
-    font-size: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
     color: #ffc857;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
+}
+
+.portfolio-view-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
 }
 
 .portfolio-item:hover .portfolio-view-icon {
@@ -1208,6 +1273,37 @@ body {
     margin: 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.3px;
+}
+
+.portfolio-video-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+.portfolio-video-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
+
+.portfolio-video-link:hover {
+    background: rgba(255, 200, 87, 0.9);
+    border-color: #ffc857;
+    color: #2f4157;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 200, 87, 0.5);
 }
 
 .portfolio-placeholder {
@@ -1257,7 +1353,8 @@ body {
     }
 
     .portfolio-view-icon {
-        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .portfolio-overlay {
@@ -1414,7 +1511,6 @@ body {
     max-width: 100%;
     max-height: 180px;
     object-fit: contain;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
     transition: transform 0.3s ease;
 }
 
@@ -1484,7 +1580,64 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    min-height: 400px;
+    min-height: 320px;
+}
+
+@media (max-width: 768px) {
+    .contact-map {
+        height: 320px;
+    }
+
+    .contact-map iframe {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-container {
+        padding: 0 18px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-map {
+        height: 260px;
+    }
+
+    .contact-map iframe {
+        min-height: 220px;
+    }
+
+    .form-row {
+        gap: 0.75rem;
+    }
+
+    .form-row.two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+        padding: 14px;
+    }
+
+    .contact-form .actions-row .contact-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-map {
+        height: 220px;
+    }
+
+    .contact-map iframe {
+        min-height: 200px;
+    }
 }
 
 .contact-form {
@@ -2009,147 +2162,32 @@ body {
     }
 }
 
-/* Development Notice Notification */
-.dev-notification {
-    position: fixed;
-    bottom: 110px;
-    right: 20px;
-    width: 350px;
-    max-width: calc(100vw - 40px);
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: 2px solid #ffc857;
-    border-radius: 16px;
-    padding: 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 200, 87, 0.2);
-    z-index: 9999;
-    opacity: 0;
-    transform: translateX(400px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-}
-
-.dev-notification.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.dev-notification.minimized {
-    height: 60px;
-    overflow: hidden;
-}
-
-.dev-notification.minimized .dev-notification-content {
-    display: none;
-}
-
-.dev-notification.minimized .dev-notification-close {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.dev-notification-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(255, 200, 87, 0.1);
-    border: 2px solid #ffc857;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.dev-notification-close:hover {
-    background: #ffc857;
-    transform: scale(1.1);
-}
-
-.dev-notification-close-icon {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2f4157;
-    line-height: 1;
-    transition: transform 0.3s ease;
-}
-
-.dev-notification-close:hover .dev-notification-close-icon {
-    color: #fff;
-}
-
-.dev-notification-content {
-    padding: 1.5rem;
-}
-
-.dev-notification-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.dev-notification-icon {
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-    flex-shrink: 0;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-8px);
-    }
-    60% {
-        transform: translateY(-4px);
-    }
-}
-
-.dev-notification-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #2f4157;
-    margin: 0;
-    line-height: 1.3;
-}
-
-.dev-notification-text {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .dev-notification {
-        right: 15px;
-        bottom: 100px;
-        width: calc(100vw - 30px);
-        max-width: 350px;
+@media (max-width: 640px) {
+    .contact-container {
+        padding: 0 18px;
     }
 
-    .dev-notification-title {
-        font-size: 1rem;
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .dev-notification-text {
-        font-size: 0.85rem;
+    .form-row {
+        gap: 0.75rem;
     }
 
-    .dev-notification-icon {
-        font-size: 1.75rem;
+    .form-row.two-col {
+        grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
-    .dev-notification {
-        width: calc(100vw - 20px);
-        right: 10px;
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+        padding: 14px;
+    }
+
+    .contact-form .actions-row .contact-submit {
+        width: 100%;
     }
 }
 

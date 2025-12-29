@@ -4,18 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NORTH PHOTO & VIDEO BOOTH - Jogja Creative Production</title>
-    <link rel="icon" type="image/png" href="logo/J.png">
+    <link rel="icon" type="image/png" href="logo/LOGO Jogja Creative Production new.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Add-ons Hover Effect */
+        .addon-item:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 6px 20px rgba(47, 65, 87, 0.15) !important;
+            border-color: #ffc857 !important;
+            background: linear-gradient(135deg, #ffffff 0%, #fff9f0 100%) !important;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            /* Paket Silver & Gold Grid */
+            .pricing-packages-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            /* Videobooth Grid */
+            .videobooth-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            /* Add-ons Grid */
+            .addons-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            /* Service Content Wrapper */
+            .service-content-wrapper {
+                flex-direction: column !important;
+            }
+            
+            .service-content-left,
+            .service-content-right {
+                width: 100% !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* All grids to single column */
+            .addons-grid,
+            .pricing-packages-grid,
+            .videobooth-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Container padding */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Price List Section */
+            .service-price-list {
+                padding: 40px 0 !important;
+            }
+            
+            .service-price-list .container {
+                padding: 0 1rem !important;
+            }
+            
+            /* Section Titles */
+            .price-list-title {
+                font-size: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            h3[style*="font-size: 1.8rem"] {
+                font-size: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Package Cards */
+            .package-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Videobooth Cards */
+            .videobooth-card {
+                padding: 1.5rem !important;
+            }
+            
+            /* Add-ons Items */
+            .addon-item {
+                padding: 1rem !important;
+            }
+            
+            .addon-item > div {
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+            }
+            
+            .addon-item > div > div:first-child {
+                width: 35px !important;
+                height: 35px !important;
+            }
+            
+            /* Benefits Grid */
+            .benefits-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Offerings Grid */
+            .offerings-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Target Pasar Grid */
+            .target-pasar-grid-single {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Service Header */
+            .service-header-content {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+            
+            .service-header-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .service-header-desc {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small devices */
+            .service-header-title {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .service-header-desc {
+                font-size: 0.9rem !important;
+            }
+            
+            .service-main-title {
+                font-size: 1.5rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            .benefits-title,
+            .offerings-title,
+            .target-pasar-title {
+                font-size: 1.8rem !important;
+            }
+            
+            /* Price formatting */
+            .package-card h4,
+            .videobooth-card h4 {
+                font-size: 1.3rem !important;
+            }
+            
+            .package-card .package-price,
+            .videobooth-card .package-price {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Cards padding */
+            .package-card,
+            .videobooth-card {
+                padding: 1.25rem !important;
+            }
+            
+            /* Add-ons text */
+            .addon-item > div > div:last-child {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Section spacing */
+            .service-price-list {
+                padding: 30px 0 !important;
+            }
+            
+            /* Grid gaps */
+            .pricing-packages-grid,
+            .videobooth-grid {
+                gap: 1.25rem !important;
+            }
+        }
+
+        /* Remove border and shadow from photobooth hero image */
+        .camera-booth-img {
+            box-shadow: none !important;
+            border: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="logo/J.png" alt="Jogja Creative Production" class="logo-img">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <img src="logo/LOGO Jogja Creative Production new.png" alt="Jogja Creative Production" class="logo-img">
                 <span class="logo-text">Jogja Creative Production</span>
-            </div>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
                 <span></span>
@@ -56,11 +251,21 @@
                     <p class="service-main-text">
                         Kami menghadirkan ruang kreatif bagi siapa pun yang ingin mengabadikan self-portrait, momen bersama sahabat, atau video pendek yang unik, tanpa fotografer, tanpa ribet. Dengan teknologi terkini, setiap hasil foto dan video langsung siap diposting, memberikan pengalaman yang memorable, personal, dan penuh ekspresi.
                     </p>
-                    <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Photobooth%20%26%20Video%20Booth%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" class="service-cta-button">Hubungi Kami</a>
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                        <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Photobooth%20%26%20Video%20Booth%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" class="service-cta-button" style="display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 20px;">Hubungi Kami</a>
+                        <a href="https://www.instagram.com/northphoto.id?igsh=MTNudnZ2eTFnenFxaw==" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3); transition: all 0.3s ease; text-decoration: none;" title="Follow us on Instagram" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(188, 24, 136, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(188, 24, 136, 0.3)';">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white" style="width: 24px; height: 24px;">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@north.photo?_r=1&_t=ZS-925wN1o9W0T" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #000000 0%, #161823 50%, #000000 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; text-decoration: none;" title="Follow us on TikTok" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.3)';">
+                            <i class="fab fa-tiktok" style="font-size: 24px; color: white;"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-content-right">
                     <div class="service-illustration">
-                        <img src="asset/Photography.PNG" alt="Photobooth & Video Booth" class="service-illustration-img">
+                        <img src="asset/Camera.png" alt="Photobooth & Video Booth" class="service-illustration-img camera-booth-img">
                     </div>
                 </div>
             </div>
@@ -139,79 +344,232 @@
     </section>
 
     <!-- Price List Section -->
-    <section class="service-price-list">
+    <section class="service-price-list" style="background: #f8f9fa; padding: 80px 0;">
         <div class="container">
-            <h2 class="price-list-title">PRICE LIST</h2>
-            <div class="price-list-wrapper">
-                <div class="price-category">
-                    <h3 class="price-category-title">Photobooth (Mini Studio)</h3>
-                    <div class="price-packages">
-                        <div class="price-package">
-                            <h4 class="package-name">PAKET SILVER</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">2 jam</span>
-                                    <span class="package-price">Rp 1.500.000</span>
-                                </div>
-                                <div class="package-item">
-                                    <span class="package-duration">Less print (Foto soft file)</span>
-                                    <span class="package-price">Rp 1.000.000</span>
-                                </div>
+            <h2 class="price-list-title" style="text-align: center; color: #2f4157; font-size: 2.5rem; font-weight: bold; margin-bottom: 3rem;">PRICE LIST</h2>
+            
+            <!-- LIST MINI STUDIO -->
+            <div style="max-width: 1200px; margin: 0 auto 4rem;">
+                <h3 style="color: #2f4157; font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">LIST MINI STUDIO</h3>
+                
+                <!-- Fasilitas Utama -->
+                <div style="background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h4 style="color: #2f4157; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Fasilitas Utama</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; color: #666;">
+                            <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem;"></i>
+                            Unlimited Photo and Print
+                        </li>
+                        <li style="padding: 0.5rem 0; color: #666;">
+                            <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem;"></i>
+                            Kamera Sony (Mirrorless)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Paket Silver & Gold -->
+                <div class="pricing-packages-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;">
+                    <!-- Paket Silver -->
+                    <div class="package-card" style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">SILVER – 2 Hours Service</h4>
+                        <div style="text-align: center;">
+                            <div style="margin-bottom: 1rem;">
+                                <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">2 Hours Service</div>
+                                <div style="font-size: 1.2rem; font-weight: bold; color: #999; text-decoration: line-through; margin-bottom: 0.5rem;">Rp 3.500.000</div>
+                                <div style="font-size: 2rem; font-weight: bold; color: #2f4157; background: white; border: 2px solid #ffc857; border-radius: 8px; padding: 0.75rem 1rem; display: inline-block;">Rp 1.500.000</div>
                             </div>
                         </div>
-                        <div class="price-package">
-                            <h4 class="package-name">PAKET GOLD</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">3 jam</span>
-                                    <span class="package-price">Rp 2.000.000</span>
+                    </div>
+
+                    <!-- Paket Gold -->
+                    <div class="package-card" style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid #ffc857;">
+                        <h4 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">GOLD – 3 Hours Service</h4>
+                        <div style="text-align: center;">
+                            <div style="margin-bottom: 1rem;">
+                                <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">3 Hours Service</div>
+                                <div style="font-size: 1.2rem; font-weight: bold; color: #999; text-decoration: line-through; margin-bottom: 0.5rem;">Rp 3.500.000</div>
+                                <div style="font-size: 2rem; font-weight: bold; color: #2f4157; background: white; border: 2px solid #ffc857; border-radius: 8px; padding: 0.75rem 1rem; display: inline-block;">Rp 2.000.000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADD-ONS -->
+                <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <h4 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 2rem; text-align: center; text-transform: uppercase; letter-spacing: 1px;">ADD-ONS</h4>
+                    <div class="addons-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-image" style="color: white; font-size: 1.1rem;"></i>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">Less print (Foto soft file)</span>
-                                    <span class="package-price">Rp 1.500.000</span>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">Backdrop polos / banner 3×3 m</div>
+                            </div>
+                        </div>
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-print" style="color: white; font-size: 1.1rem;"></i>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">Add on 30 menit</span>
-                                    <span class="package-price">Rp 500.000</span>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">Cetakan 4R Premium Photo</div>
+                            </div>
+                        </div>
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-desktop" style="color: white; font-size: 1.1rem;"></i>
+                                </div>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">Printer Epson L8050</div>
+                            </div>
+                        </div>
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-tshirt" style="color: white; font-size: 1.1rem;"></i>
+                                </div>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">Property (Kacamata, Hand Prop, Karpet Merah)</div>
+                            </div>
+                        </div>
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-palette" style="color: white; font-size: 1.1rem;"></i>
+                                </div>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">Free Design</div>
+                            </div>
+                        </div>
+                        <div class="addon-item" style="padding: 1.25rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border: 1px solid #e9ecef; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ffc857 0%, #ffb347 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-clock" style="color: white; font-size: 1.1rem;"></i>
+                                </div>
+                                <div style="color: #2f4157; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">
+                                    Overtime: <strong style="color: #ffc857; font-size: 1rem;">Rp 500.000 / 30 menit</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="price-category">
-                    <h3 class="price-category-title">Videobooth</h3>
-                    <div class="price-packages">
-                        <div class="price-package">
-                            <h4 class="package-name">Paket Premium</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">2 jam</span>
-                                    <span class="package-price">Rp 2.000.000</span>
+            </div>
+
+            <!-- VIDEOBOOTH -->
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h3 style="color: #2f4157; font-size: 1.8rem; font-weight: bold; margin-bottom: 2rem; text-align: center;">VIDEOBOOTH – NORTHPHOTO.ID</h3>
+                
+                <div class="videobooth-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <!-- STANDART -->
+                    <div class="videobooth-card" style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">STANDART</h4>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="color: #2f4157; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">Fasilitas:</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Papan Spin 360 Kayu
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Lighting 3–4
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Output MP4
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Scan barcode, airdrop, email
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Free desain & request background music
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Property 2 macam
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top: 2px solid #f0f0f0; padding-top: 1.5rem;">
+                            <h5 style="color: #2f4157; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Harga:</h5>
+                            <div style="margin-bottom: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">2 jam</span>
+                                    <span style="font-weight: bold; color: #2f4157;">Rp 1.500.000</span>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">3 jam</span>
-                                    <span class="package-price">Rp 2.500.000</span>
+                            </div>
+                            <div style="margin-bottom: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">3 jam</span>
+                                    <span style="font-weight: bold; color: #2f4157;">Rp 2.000.000</span>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">Tambahan 30 menit</span>
-                                    <span class="package-price">Rp 500.000</span>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">Extend 30 menit</span>
+                                    <span style="font-weight: bold; color: #ffc857;">+Rp 500.000</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="price-package">
-                            <h4 class="package-name">Paket Standar</h4>
-                            <div class="package-details">
-                                <div class="package-item">
-                                    <span class="package-duration">2 jam</span>
-                                    <span class="package-price">Rp 1.500.000</span>
+                    </div>
+
+                    <!-- PREMIUM -->
+                    <div class="videobooth-card" style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid #ffc857;">
+                        <h4 style="color: #2f4157; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">PREMIUM</h4>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="color: #2f4157; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">Fasilitas:</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Papan Spin 360 Kaca Tebal Mewah
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Lighting 4–6
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Red Carpet
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Output MP4
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Scan barcode, airdrop, email
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Free desain & request background music
+                                </li>
+                                <li style="padding: 0.4rem 0; color: #666; font-size: 0.95rem;">
+                                    <i class="fas fa-check" style="color: #ffc857; margin-right: 0.5rem; font-size: 0.85rem;"></i>
+                                    Property 5 macam
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top: 2px solid #f0f0f0; padding-top: 1.5rem;">
+                            <h5 style="color: #2f4157; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Harga:</h5>
+                            <div style="margin-bottom: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">2 jam</span>
+                                    <span style="font-weight: bold; color: #2f4157;">Rp 2.000.000</span>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">3 jam</span>
-                                    <span class="package-price">Rp 2.000.000</span>
+                            </div>
+                            <div style="margin-bottom: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">3 jam</span>
+                                    <span style="font-weight: bold; color: #2f4157;">Rp 2.500.000</span>
                                 </div>
-                                <div class="package-item">
-                                    <span class="package-duration">Tambahan 30 menit</span>
-                                    <span class="package-price">Rp 500.000</span>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="color: #666;">Extend 30 menit</span>
+                                    <span style="font-weight: bold; color: #ffc857;">+Rp 500.000</span>
                                 </div>
                             </div>
                         </div>
@@ -347,22 +705,12 @@
                 <div class="footer-col">
                     <h4>Jogja Creative Production</h4>
                     <p>Perum Jl. Griya Mlati Indah No.B4<br>Mulungan Kulon, Sendangadi, Kec. Mlati<br>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285</p>
-                    <p><strong>Telpon:</strong> 08567874388</p>
+                    <p><strong>Telpon:</strong>08567874388</p>
                     <p><strong>Email:</strong> jogjacreativepro@gmail.com</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/jogjacreativeproduction/" target="_blank" rel="noopener noreferrer" title="Instagram">
                             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                 <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
                             </svg>
                         </a>
                         <a href="https://wa.me/628567874388?text=Halo%20admin%2C%20saya%20tertarik%20dengan%20layanan%20Jogja%20Creative%20Production%20dan%20ingin%20mengetahui%20lebih%20lanjut.%20Boleh%20dibantu%3F" target="_blank" rel="noopener noreferrer" title="WhatsApp">
@@ -378,8 +726,6 @@
                         <li><a href="tentang-kami.html">Tentang kami</a></li>
                         <li><a href="index.html#services">Layanan</a></li>
                         <li><a href="index.html#portfolio">Portofolio</a></li>
-                        <li><a href="index.html#blog">Blog</a></li>
-                        <li><a href="#">Promo</a></li>
                     </ul>
                 </div>
             </div>
@@ -424,6 +770,30 @@
                     }
                 });
             }
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const targets = document.querySelectorAll('section, .service-card, .price-card, .videobooth-card, .addon-card, .benefit-card, .offering-card, .contact-card, .target-category-card, .team-member, .faq-item');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+        targets.forEach((el, idx) => {
+            el.classList.add('reveal-on-scroll');
+            if (reduceMotion) {
+                el.classList.add('visible');
+                return;
+            }
+            el.style.transitionDelay = `${Math.min(idx * 40, 240)}ms`;
+            observer.observe(el);
+        });
         });
     </script>
 </body>

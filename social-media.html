@@ -731,48 +731,122 @@
     <script src="https://crowdsubsequentadmire.com/ce97a54a4a08eed05e89c7ec0a07833c/invoke.js"></script>
     <script src="https://crowdsubsequentadmire.com/47/3d/fd/473dfdc93eba4a183ed259758897c4bd.js"></script>
 
-    <!-- Anti-AdBlock Detection Script -->
+    <!-- Anti-AdBlock Detection Script (Enhanced for AdGuard) -->
     <script>
         (function() {
+            var adBlockDetected = false;
+            
             function detectAdBlock() {
-                var adBlockDetected = false;
-                
                 // Metode 1: Buat elemen umpan dengan class iklan
                 var testAd = document.createElement('div');
                 testAd.innerHTML = '&nbsp;';
-                testAd.className = 'adsbox ad-banner ad-placement textads banner-ads';
+                testAd.className = 'adsbox ad-banner ad-placement textads banner-ads pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads';
                 testAd.style.cssText = 'position:absolute; left:-9999px; top:-9999px; height:10px; width:10px;';
                 document.body.appendChild(testAd);
                 
-                // Metode 2: Buat elemen dengan ID iklan
+                // Metode 2: Buat elemen dengan ID iklan (AdGuard sering blokir ini)
                 var testAd2 = document.createElement('div');
                 testAd2.innerHTML = '&nbsp;';
-                testAd2.id = 'ad-test-container';
+                testAd2.id = 'google_ads_iframe_test';
                 testAd2.style.cssText = 'position:absolute; left:-9999px; top:-9999px; height:10px; width:10px;';
                 document.body.appendChild(testAd2);
                 
+                // Metode 3: Elemen dengan atribut data-ad (AdGuard detection)
+                var testAd3 = document.createElement('div');
+                testAd3.innerHTML = '&nbsp;';
+                testAd3.setAttribute('data-ad-slot', 'test');
+                testAd3.setAttribute('data-adsbygoogle-status', 'test');
+                testAd3.className = 'adsbygoogle';
+                testAd3.style.cssText = 'position:absolute; left:-9999px; top:-9999px; height:10px; width:10px;';
+                document.body.appendChild(testAd3);
+                
+                // Metode 4: Coba load script dari domain yang sering diblokir AdGuard
+                var scriptBlocked = false;
+                var testScript = document.createElement('script');
+                testScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                testScript.async = true;
+                testScript.onerror = function() {
+                    scriptBlocked = true;
+                };
+                document.head.appendChild(testScript);
+                
+                // Metode 5: Fetch ke URL iklan (AdGuard blocks network requests)
+                var fetchBlocked = false;
+                if (window.fetch) {
+                    fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+                        method: 'HEAD',
+                        mode: 'no-cors'
+                    }).catch(function() {
+                        fetchBlocked = true;
+                    });
+                }
+                
                 window.setTimeout(function() {
+                    var isBlocked = false;
+                    
+                    // Cek elemen yang diblokir
                     if (testAd.offsetHeight === 0 || testAd.clientHeight === 0 || 
-                        testAd2.offsetHeight === 0 || testAd2.clientHeight === 0) {
+                        window.getComputedStyle(testAd).display === 'none' ||
+                        window.getComputedStyle(testAd).visibility === 'hidden') {
+                        isBlocked = true;
+                    }
+                    
+                    if (testAd2.offsetHeight === 0 || testAd2.clientHeight === 0 ||
+                        window.getComputedStyle(testAd2).display === 'none') {
+                        isBlocked = true;
+                    }
+                    
+                    if (testAd3.offsetHeight === 0 || testAd3.clientHeight === 0 ||
+                        window.getComputedStyle(testAd3).display === 'none') {
+                        isBlocked = true;
+                    }
+                    
+                    // Cek script atau fetch yang diblokir
+                    if (scriptBlocked || fetchBlocked) {
+                        isBlocked = true;
+                    }
+                    
+                    // Cek AdGuard variable (AdGuard kadang inject variable)
+                    if (typeof window.adguardDetected !== 'undefined' || 
+                        typeof window.__adblock !== 'undefined' ||
+                        typeof window.adblock !== 'undefined') {
+                        isBlocked = true;
+                    }
+                    
+                    if (isBlocked && !adBlockDetected) {
+                        adBlockDetected = true;
                         showAdBlockMessage();
                     }
-                    testAd.remove();
-                    testAd2.remove();
-                }, 150);
+                    
+                    // Cleanup
+                    if (testAd.parentNode) testAd.remove();
+                    if (testAd2.parentNode) testAd2.remove();
+                    if (testAd3.parentNode) testAd3.remove();
+                    if (testScript.parentNode) testScript.remove();
+                }, 300);
             }
 
             function showAdBlockMessage() {
+                if (document.getElementById('adblock-overlay')) return;
+                
                 var overlay = document.createElement('div');
                 overlay.id = 'adblock-overlay';
-                overlay.innerHTML = '<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;display:flex;justify-content:center;align-items:center;"><div style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 100%);padding:50px;border-radius:20px;text-align:center;max-width:500px;margin:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);"><div style="font-size:60px;margin-bottom:20px;">🛑</div><h2 style="color:#e74c3c;margin-bottom:15px;font-size:28px;font-weight:700;">Ad Blocker Terdeteksi!</h2><p style="color:#333;margin-bottom:20px;font-size:16px;line-height:1.6;">Kami mendeteksi bahwa Anda menggunakan Ad Blocker. Mohon nonaktifkan Ad Blocker untuk melanjutkan mengakses website ini.</p><p style="color:#666;font-size:14px;margin-bottom:25px;line-height:1.5;">Iklan membantu kami untuk terus menyediakan layanan terbaik kepada Anda secara gratis.</p><button onclick="location.reload()" style="background:linear-gradient(135deg,#3498db 0%,#2980b9 100%);color:white;border:none;padding:15px 40px;border-radius:50px;cursor:pointer;font-size:16px;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(52,152,219,0.4);">Saya Sudah Menonaktifkan Ad Blocker</button></div></div>';
+                overlay.innerHTML = '<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;display:flex;justify-content:center;align-items:center;"><div style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 100%);padding:50px;border-radius:20px;text-align:center;max-width:500px;margin:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);"><div style="font-size:60px;margin-bottom:20px;">🛑</div><h2 style="color:#e74c3c;margin-bottom:15px;font-size:28px;font-weight:700;">Ad Blocker Terdeteksi!</h2><p style="color:#333;margin-bottom:20px;font-size:16px;line-height:1.6;">Kami mendeteksi bahwa Anda menggunakan Ad Blocker (termasuk AdGuard). Mohon nonaktifkan Ad Blocker untuk melanjutkan mengakses website ini.</p><p style="color:#666;font-size:14px;margin-bottom:25px;line-height:1.5;">Iklan membantu kami untuk terus menyediakan layanan terbaik kepada Anda secara gratis.</p><button onclick="location.reload()" style="background:linear-gradient(135deg,#3498db 0%,#2980b9 100%);color:white;border:none;padding:15px 40px;border-radius:50px;cursor:pointer;font-size:16px;font-weight:600;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(52,152,219,0.4);">Saya Sudah Menonaktifkan Ad Blocker</button></div></div>';
                 document.body.appendChild(overlay);
                 document.body.style.overflow = 'hidden';
             }
 
+            // Jalankan deteksi multiple times untuk memastikan
             if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', detectAdBlock);
+                document.addEventListener('DOMContentLoaded', function() {
+                    detectAdBlock();
+                    setTimeout(detectAdBlock, 500);
+                    setTimeout(detectAdBlock, 1500);
+                });
             } else {
                 detectAdBlock();
+                setTimeout(detectAdBlock, 500);
+                setTimeout(detectAdBlock, 1500);
             }
         })();
     </script>

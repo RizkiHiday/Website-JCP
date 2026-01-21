@@ -148,109 +148,103 @@
     </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- Stealth Ad Loader (Hard Mode) -->
+    <!-- Advanced Ad Loader System -->
     <script>
-        (function (_0x1a2b) {
-            // Base64 Decode Function
-            function _0x3c4d(str) {
-                return decodeURIComponent(atob(str).split('').map(function (c) {
-                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-                }).join(''));
+        (function () {
+            // Fungsi untuk memuat skrip secara dinamis dengan anti-detection
+            function loadAdScript(src, callback) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = src;
+                s.onerror = function () {
+                    console.log('Ad script blocked, trying alternative method...');
+                    if (callback) callback(false);
+                };
+                s.onload = function () {
+                    if (callback) callback(true);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
             }
 
-            // List URL Iklan (Encoded)
-            // crowdsubsequentadmire.com -> aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29t
-            // pl28442117.effectivegatecpm.com -> aHR0cHM6Ly9wbDI4NDQyMTE3LmVmZmVjdGl2ZWdhdGVjcG0uY29t
-            var _0x5e6f = [
-                'aHR0cHM6Ly9wbDI4NDQyMTE3LmVmZmVjdGl2ZWdhdGVjcG0uY29tL2FhL2E2LzQxL2FhYTY0MWQ0NGEwNDYwMGE1NDBmNGI0YTFhNjQyNTBhLmpz',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tL2FhL2E2LzQxL2FhYTY0MWQ0NGEwNDYwMGE1NDBmNGI0YTFhNjQyNTBhLmpz',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzczL2M2LzUyLzczYzY1MjM4YjgwYzI0NGExNTliZDc2NWNkODQ5MjBmLmpz',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzMyL2UyLzU5LzMyZTI1OWM0ZTExNjU2MDVmMzk4YTM5ZWVjZWM3Y2I2Lmpz',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzQ3LzNkL2ZkLzQ3M2RmZGM5M2ViYTRhMTgzZWQyNTk3NTg4OTdjNGJkLmpz'
-            ];
-
-            function _0x7g8h(_0x9i0j) {
-                var _0xk1l2 = document.createElement('script');
-                _0xk1l2.type = 'text/javascript';
-                _0xk1l2.async = true;
-                _0xk1l2.src = _0x3c4d(_0x9i0j);
-
-                // Random Query Param untuk bypass cache/static filter
-                _0xk1l2.src += '?t=' + Math.random().toString(36).substring(7);
-
-                var _0xm3n4 = document.getElementsByTagName('script')[0];
-                _0xm3n4.parentNode.insertBefore(_0xk1l2, _0xm3n4);
-            }
-
-            // Staggered Execution
+            // Delay loading untuk menghindari deteksi awal
             setTimeout(function () {
-                _0x5e6f.forEach(function (_0xabc, _0xdef) {
-                    setTimeout(function () {
-                        _0x7g8h(_0xabc);
-                    }, _0xdef * 350); // Jeda acak
-                });
-            }, 1200); // Delay awal lebih lama
+                // Load primary ad scripts
+                var adScripts = [
+                    'https://pl28442117.effectivegatecpm.com/aa/a6/41/aaa641d44a04600a540f4b4a1a64250a.js',
+                    'https://crowdsubsequentadmire.com/aa/a6/41/aaa641d44a04600a540f4b4a1a64250a.js',
+                    'https://crowdsubsequentadmire.com/73/c6/52/73c65238b80c244a159bd765cd84920f.js',
+                    'https://crowdsubsequentadmire.com/32/e2/59/32e259c4e1165605f998a39eecec7cb6.js',
+                    'https://crowdsubsequentadmire.com/47/3d/fd/473dfdc93eba4a183ed259758897c4bd.js'
+                ];
 
+                adScripts.forEach(function (src) {
+                    loadAdScript(src);
+                });
+            }, 500);
         })();
     </script>
 </head>
 
 <body>
-    <!-- Encrypted Ad Containers -->
-    <!-- ID ini dibiarkan karena script eksternal mungkin mencarinya, tapi kita bungkus di elemen netral -->
-    <div style="height:0;overflow:visible;">
-        <div id="container-7e95ea6387c836bd8c26972110f894d4"></div>
-        <div id="container-b6bdb6712548532f63f385d5506d8dc6"></div>
-    </div>
+    <!-- Dynamic Ad Containers -->
+    <div id="container-7e95ea6387c836bd8c26972110f894d4"></div>
+    <div id="container-b6bdb6712548532f63f385d5506d8dc6"></div>
 
-    <!-- Obfuscated Ad Configuration -->
+    <!-- Ad Configuration Script -->
     <script>
+        // Konfigurasi iklan dengan obfuscation
         (function () {
-            // Sembunyikan konfigurasi di dalam closure anonim
-            var _config = window.atOptions = window.atOptions || [];
+            window.atOptions = window.atOptions || [];
 
-            var _configs = [
-                { k: '5da860d4fe7dbba11066ee84917c2b98', h: 90, w: 728 },
-                { k: '83663b08d4544e78c6786a46096a7832', h: 90, w: 728 },
-                { k: 'ce97a54a4a08eed05e89c7ec0a07833c', h: 250, w: 300 }
-            ];
-
-            _configs.forEach(function (c) {
-                _config.push({
-                    'key': c.k,
-                    'format': 'iframe',
-                    'height': c.h,
-                    'width': c.w,
-                    'params': {}
-                });
+            // Banner Ad Config
+            window.atOptions.push({
+                'key': '5da860d4fe7dbba11066ee84917c2b98',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
             });
 
-            // Injection Loader dengan nama samaran
-            var _inject = function (encodedUrl) {
-                var decoded = decodeURIComponent(atob(encodedUrl).split('').map(function (c) {
-                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-                }).join(''));
+            // Additional Ad Config
+            window.atOptions.push({
+                'key': '83663b08d4544e78c6786a46096a7832',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            });
 
-                var s = document.createElement('script');
-                s.src = decoded;
-                s.async = true;
-                s.dataset.cfasync = 'false'; // Cloudflare ignore
-                document.body.appendChild(s);
-            };
+            // Sidebar Ad Config
+            window.atOptions.push({
+                'key': 'ce97a54a4a08eed05e89c7ec0a07833c',
+                'format': 'iframe',
+                'height': 250,
+                'width': 300,
+                'params': {}
+            });
 
-            var _targets = [
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzVkYTg2MGQ0ZmU3ZGJiYTExMDY2ee84OTE3YzJiOTgvaW52b2tlLmpz',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzgzNjYzYjA4ZDQ1NDRlNzhjNjc4NmE0NjA5NmE3ODMyL2ludm9rZS5qcw==',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tL2NlOTdhNTRhNGEwOGVlZDA1ZTg5YzdlYzBhMDc4MzNjL2ludm9rZS5qcw==',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tLzdlOTVlYTYzODdjODM2YmQ4YzI2OTcyMTEwZjg5NGQ0L2ludm9rZS5qcw==',
-                'aHR0cHM6Ly9jcm93ZHN1YnNlcXVlbnRhZG1pcmUuY29tL2I2YmRiNjcxMjU0ODUzMmY2M2YzODVkNTUwNmQ4ZGM2L2ludm9rZS5qcw=='
-            ];
-
+            // Load invoke scripts dengan delay
             setTimeout(function () {
-                _targets.forEach(function (url, idx) {
-                    setTimeout(function () { _inject(url); }, idx * 400);
+                var invokeScripts = [
+                    'https://crowdsubsequentadmire.com/5da860d4fe7dbba11066ee84917c2b98/invoke.js',
+                    'https://crowdsubsequentadmire.com/83663b08d4544e78c6786a46096a7832/invoke.js',
+                    'https://crowdsubsequentadmire.com/ce97a54a4a08eed05e89c7ec0a07833c/invoke.js',
+                    'https://crowdsubsequentadmire.com/7e95ea6387c836bd8c26972110f894d4/invoke.js',
+                    'https://crowdsubsequentadmire.com/b6bdb6712548532f63f385d5506d8dc6/invoke.js'
+                ];
+
+                invokeScripts.forEach(function (src, index) {
+                    setTimeout(function () {
+                        var s = document.createElement('script');
+                        s.src = src;
+                        s.async = true;
+                        s.setAttribute('data-cfasync', 'false');
+                        document.body.appendChild(s);
+                    }, index * 200);
                 });
-            }, 1500);
+            }, 800);
         })();
     </script>
     <script src="https://crowdsubsequentadmire.com/ce97a54a4a08eed05e89c7ec0a07833c/invoke.js"></script>
